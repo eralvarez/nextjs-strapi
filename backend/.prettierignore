@@ -1,0 +1,9 @@
+.cache
+.tmp
+dist
+build
+node_modules
+.strapi
+.git
+package-lock.json
+*.min.js 
