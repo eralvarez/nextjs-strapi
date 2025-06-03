@@ -7,3 +7,4 @@ node_modules
 .git
 package-lock.json
 *.min.js 
+config/sync

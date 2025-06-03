@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "user_profiles",
+  "info": {
+    "singularName": "user-profile",
+    "pluralName": "user-profiles",
+    "displayName": "User profile"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "firstName": {
+      "type": "string",
+      "required": true
+    },
+    "lastName": {
+      "type": "string",
+      "required": true
+    },
+    "user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    }
+  }
+}

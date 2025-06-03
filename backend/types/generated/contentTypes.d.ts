@@ -340,6 +340,31 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiUserProfileUserProfile extends Struct.CollectionTypeSchema {
+  collectionName: 'user_profiles';
+  info: {
+    displayName: 'User profile';
+    pluralName: 'user-profiles';
+    singularName: 'user-profile';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> & Schema.Attribute.Private;
+    firstName: Schema.Attribute.String & Schema.Attribute.Required;
+    lastName: Schema.Attribute.String & Schema.Attribute.Required;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::user-profile.user-profile'> &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> & Schema.Attribute.Private;
+    user: Schema.Attribute.Relation<'oneToOne', 'plugin::users-permissions.user'>;
+  };
+}
+
 export interface PluginContentReleasesRelease extends Struct.CollectionTypeSchema {
   collectionName: 'strapi_releases';
   info: {
@@ -767,6 +792,7 @@ declare module '@strapi/strapi' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
+      'api::user-profile.user-profile': ApiUserProfileUserProfile;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;

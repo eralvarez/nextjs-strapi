@@ -6,6 +6,69 @@
   "locale": null,
   "permissions": [
     {
+      "documentId": "umekchd5tiig79zrawfuitr9",
+      "action": "plugin::content-manager.explorer.create",
+      "actionParameters": {},
+      "subject": "api::user-profile.user-profile",
+      "properties": {
+        "fields": [
+          "firstName",
+          "lastName",
+          "user"
+        ]
+      },
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "okvqgvj4w5gc8veb1f9srwf3",
+      "action": "plugin::content-manager.explorer.delete",
+      "actionParameters": {},
+      "subject": "api::user-profile.user-profile",
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "u397ecq1ghbtiizcz2hguy2d",
+      "action": "plugin::content-manager.explorer.publish",
+      "actionParameters": {},
+      "subject": "api::user-profile.user-profile",
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "dknxl4im2tzg89w9n6xogl6c",
+      "action": "plugin::content-manager.explorer.read",
+      "actionParameters": {},
+      "subject": "api::user-profile.user-profile",
+      "properties": {
+        "fields": [
+          "firstName",
+          "lastName",
+          "user"
+        ]
+      },
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "t5ztz7vfkjiw4hsn5r33my65",
+      "action": "plugin::content-manager.explorer.update",
+      "actionParameters": {},
+      "subject": "api::user-profile.user-profile",
+      "properties": {
+        "fields": [
+          "firstName",
+          "lastName",
+          "user"
+        ]
+      },
+      "conditions": [],
+      "locale": null
+    },
+    {
       "documentId": "x0a2rujmbobozk98c35hshsj",
       "action": "admin::api-tokens.access",
       "actionParameters": {},
