@@ -11,6 +11,8 @@
     "develop": "strapi develop",
     "start": "strapi start",
     "strapi": "strapi",
+    "strapi:policies": "strapi policies:list",
+    "strapi:generate": "strapi generate",
     "upgrade": "npx @strapi/upgrade latest",
     "upgrade:dry": "npx @strapi/upgrade latest --dry",
     "format": "prettier --write .",
@@ -21,7 +23,9 @@
     "@strapi/plugin-graphql": "^5.14.0",
     "@strapi/plugin-users-permissions": "5.14.0",
     "@strapi/strapi": "5.14.0",
+    "@supabase/supabase-js": "^2.50.0",
     "better-sqlite3": "11.3.0",
+    "module-alias": "^2.2.3",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-router-dom": "^6.0.0",
@@ -42,5 +46,8 @@
   "strapi": {
     "uuid": "5b7ff3ed-3ae9-4d2d-91aa-a642b3775511",
     "installId": "7930366e02e50e76d9d2df0b59942b908c1834427c8500ae29db0647b873516c"
+  },
+  "_moduleAliases": {
+    "@clients": "src/clients"
   }
 }

@@ -13,7 +13,11 @@
     "noEmitOnError": true,
     "noImplicitThis": true,
     "outDir": "dist",
-    "rootDir": "."
+    "rootDir": ".",
+    // "baseUrl": "./src",
+    // "paths": {
+    //   "@clients/*": ["./clients/*"]
+    // }
   },
   "include": [
     // Include root files

@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "team_scores",
+  "info": {
+    "singularName": "team-score",
+    "pluralName": "team-scores",
+    "displayName": "Team score"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "score": {
+      "type": "integer"
+    },
+    "team": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::team.team",
+      "inversedBy": "scores"
+    }
+  }
+}
